@@ -5,7 +5,7 @@ from .permissions import IsOwner
 from rest_framework import permissions
 from rest_framework.generics import ListAPIView
 
-from .models import Books, Genre
+from .models import Books, Genre, Rating, BookState
 from . import serializers
 
 
@@ -37,4 +37,14 @@ class BookViewSet(ModelViewSet):
 
 class GenreView(ListAPIView):
     queryset = Genre.objects.all()
+    serializer_class = serializers.GenreSerializer
+
+
+class RatingViewSet(ModelViewSet):
+    queryset = Rating.objects.all()
+    serializer_class = serializers.GenreSerializer
+
+
+class BookStateViewSet(ModelViewSet):
+    queryset = BookState.objects.all()
     serializer_class = serializers.GenreSerializer

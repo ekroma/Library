@@ -1,10 +1,9 @@
-
-from django.db import models
-
+from .choices import BookStateChoices
 from .utils import get_time
 from slugify import slugify
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django.db import models
 
 User = get_user_model()
 
@@ -61,3 +60,20 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
 
+
+class Rating(models.Model):
+    user = models.ForeignKey(User)
+    book = models.ForeignKey(Books)
+    rating = models.PositiveIntegerField()
+
+    def __str__(self) -> str:
+        return f'{self.user} {self.rating}'
+
+
+class BookState(models.Model):
+    user = models.ForeignKey(User)
+    book = models.ForeignKey(Books)
+    state = models.CharField(choices=BookStateChoices.choices, null=True, blank=True)
+
+    def __str__(self) -> str:
+        return f'{self.user} {self.rating}'
