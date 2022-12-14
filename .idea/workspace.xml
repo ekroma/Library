@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd21104f-3707-42d1-9547-acf4a76f3364" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Library/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/library/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/poetry.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ПРОЧТИ МЕНЯ ТОЖЕ.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/apps/books/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/choices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/templates/account/code_mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/templates/account/code_mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/account/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/choices.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/apps/books/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/config/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/config/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/config/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/Library/middleware.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ItRwGHrTu7sSzC4NOp7ZF6GGlw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/danya/Проекты/django/Library"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd21104f-3707-42d1-9547-acf4a76f3364" name="Changes" comment="" />
+      <created>1670999129966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670999129966</updated>
+    </task>
+    <servers />
+  </component>
+</project>
