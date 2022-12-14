@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
 
+    'flower',
+
+    'core',
+
     #apps
     'apps.account',
     'apps.books',
@@ -64,7 +68,7 @@ MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
 
-    'middleware.CheckTime',
+    'core.middleware.CheckTime',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -186,8 +190,8 @@ REST_FRAMEWORK = {
     'SEARCH_PARAM': 'search'
 }
 
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL =  config('CELERY_BROKER_URL')
+CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND')
 
 ACTIVATION_CODE_URL = config('ACTIVATE_CODE_URL')
 

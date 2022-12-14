@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+  redis:
+    restart: always
+    image: redis:7-alpine
+    env_file:
+      - ./.env
+    ports:
+      - 6379:6379
+    volumes:
+      - ./server/redis:/opt/redis
+  database:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env
+    volumes:
+      - ./server/database:/var/lib/postgresql
+  database_admin:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    env_file:
+      - ./.env
+    depends_on:
+      - database
+  django:
+    build: ./server/src
+    command: >
+      sh -c "python3 manage.py migrate &&
+             python3 manage.py runserver 0.0.0.0:8000"
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+    volumes:
+      - ./server/src:/app
+    depends_on:
+      - database
+      - redis
+  celery:
+    build: ./server/src
+    command: >
+      sh -c "celery -A config worker -l info"
+    ports:
+      - 5555:5555
+    env_file:
+      - ./.env
+    volumes:
+      - ./server/src:/app
+    depends_on:
+      - django
+  flower:
+    image: mher/flower
+    command: celery --broker=redis://redis:6379 flower --port=5556
+    ports:
+      - 5556:5556
+    depends_on:
+      - redis

@@ -62,18 +62,18 @@ class Genre(models.Model):
 
 
 class Rating(models.Model):
-    user = models.ForeignKey(User)
-    book = models.ForeignKey(Books)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE)
     rating = models.PositiveIntegerField()
 
-    def __str__(self) -> str:
+    def __str__(self):
         return f'{self.user} {self.rating}'
 
 
 class BookState(models.Model):
-    user = models.ForeignKey(User)
-    book = models.ForeignKey(Books)
-    state = models.CharField(choices=BookStateChoices.choices, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE)
+    state = models.CharField(max_length=250, choices=BookStateChoices.choices, null=True, blank=True)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return f'{self.user} {self.rating}'

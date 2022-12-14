@@ -4,6 +4,7 @@ from rest_framework.viewsets import ModelViewSet
 from .permissions import IsOwner
 from rest_framework import permissions
 from rest_framework.generics import ListAPIView
+from rest_framework.response import Response
 
 from .models import Books, Genre, Rating, BookState
 from . import serializers
@@ -42,9 +43,12 @@ class GenreView(ListAPIView):
 
 class RatingViewSet(ModelViewSet):
     queryset = Rating.objects.all()
-    serializer_class = serializers.GenreSerializer
+    serializer_class = serializers.RatingSerializer
 
 
 class BookStateViewSet(ModelViewSet):
     queryset = BookState.objects.all()
-    serializer_class = serializers.GenreSerializer
+    serializer_class = serializers.BookStateSerializer
+
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)

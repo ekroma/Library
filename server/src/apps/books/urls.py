@@ -8,6 +8,6 @@ router.register('book-states', BookStateViewSet)
 router.register('rating', RatingViewSet)
 
 
-urlpatterns = list()
+urlpatterns = [
 
-urlpatterns += router.urls
+] + router.urls
