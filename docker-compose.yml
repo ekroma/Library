@@ -6,15 +6,11 @@ services:
     image: redis:7-alpine
     env_file:
       - ./.env
-    ports:
-      - 6379:6379
     volumes:
       - ./server/redis:/opt/redis
   database:
     image: postgres:latest
     restart: always
-    ports:
-      - 5432:5432
     env_file:
       - ./.env
     volumes:
@@ -46,8 +42,6 @@ services:
     build: ./server/src
     command: >
       sh -c "celery -A config worker -l info"
-    ports:
-      - 5555:5555
     env_file:
       - ./.env
     volumes:
