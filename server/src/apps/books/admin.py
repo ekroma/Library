@@ -7,7 +7,7 @@ admin.site.register(Rating)
 class TabularInlineImage(admin.TabularInline):
     model = BookCover
     extra = 0
-    fields = ['cover']
+    fields = ['book']
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
@@ -16,7 +16,7 @@ class GenreAdmin(admin.ModelAdmin):
     
 @admin.register(Books)
 class BookAdmin(admin.ModelAdmin):
-    # inlines = [TabularInlineImage, ]
+    inlines = [TabularInlineImage, ]
     list_display = ('slug','user', 'title', 'created_at')
     list_display_links = ('user',)
     list_filter = ('genre', 'created_at')
