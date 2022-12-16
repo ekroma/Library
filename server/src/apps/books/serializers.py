@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Books, Genre, BookCover
+from .models import Books, Genre, BookCover, BookState, Rating
 
 
 class BookImageSerializer(serializers.ModelSerializer):
@@ -10,7 +10,6 @@ class BookImageSerializer(serializers.ModelSerializer):
 
 class BookSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
-
 
     class Meta:
         model = Books
@@ -42,3 +41,15 @@ class CurrentBookDefault:
 
     def call(self, serializer_field):
         return serializer_field.context['book']
+
+
+class RatingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Rating
+        fields = '__all__'
+
+
+class BookStateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BookState
+        fields = '__all__'

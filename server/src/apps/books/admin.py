@@ -1,9 +1,13 @@
 from django.contrib import admin
-from .models import Books, BookCover, Genre
+from .models import Books, BookCover, Genre, BookState, Rating
+
+# admin.site.register(BookState)
+admin.site.register(Rating)
+
 class TabularInlineImage(admin.TabularInline):
     model = BookCover
     extra = 0
-    fields = ['cover']
+    fields = ['book']
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):

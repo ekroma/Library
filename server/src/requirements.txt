@@ -1,0 +1,13 @@
+django==4.1.4
+pillow==9.3.0
+redis==4.4.0
+django-cors-headers==3.13.0
+slugify==0.0.1
+django-filter==22.1
+drf-yasg==1.21.4
+amqp==5.1.1
+python-decouple==3.6
+djangorestframework-simplejwt==5.2.2
+psycopg2-binary==2.9
+celery==5.2.7
+django-flower==1.0.0

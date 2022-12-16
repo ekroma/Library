@@ -20,6 +20,7 @@ python-decouple = "^3.6"
 djangorestframework-simplejwt = "^5.2.2"
 psycopg2-binary = "^2.9.5"
 celery = "^5.2.7"
+django-flower = "^1.0.0"
 
 
 [build-system]

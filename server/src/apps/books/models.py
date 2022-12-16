@@ -1,10 +1,9 @@
-
-from django.db import models
-
+from .choices import BookStateChoices
 from .utils import get_time
 from slugify import slugify
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django.db import models
 
 User = get_user_model()
 
@@ -13,7 +12,7 @@ class Books(models.Model):
     title = models.CharField('Title', max_length=200)
     file = models.FileField(
         'book_file', 
-        upload_to='book_file',
+        upload_to='book/file',
         )
     genre = models.ManyToManyField(
         to='Genre',
@@ -21,7 +20,7 @@ class Books(models.Model):
     )
     slug = models.SlugField('Slug', max_length=220, primary_key=True, blank=True)
     cover = models.ImageField(
-        upload_to='book_cover',        
+        upload_to='book/cover',
     )
     created_at = models.DateTimeField(auto_now_add=True)
     author = models.CharField('Author', max_length=100, blank=True)
@@ -61,3 +60,20 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
 
+
+class Rating(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE)
+    rating = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f'{self.user} {self.rating}'
+
+
+class BookState(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE)
+    state = models.CharField(max_length=250, choices=BookStateChoices.choices, null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.user} {self.rating}'
