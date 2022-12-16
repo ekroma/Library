@@ -4,8 +4,8 @@ from .views import BookViewSet, RatingViewSet, BookStateViewSet
 
 router = DefaultRouter()
 router.register('books', BookViewSet, 'books')
-router.register('book-states', BookStateViewSet)
-router.register('rating', RatingViewSet)
+router.register('user/book/states', BookStateViewSet)
+router.register('user/book/rating', RatingViewSet)
 
 
 urlpatterns = [

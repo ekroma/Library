@@ -1,15 +1,23 @@
 from django.db.models import signals
 from django.dispatch import receiver
-from .models import Rating
+from .models import UserBookRating
 
 
-@receiver(signals.post_save, sender=Rating)
-def my_handler(sender, instance, **kwargs):
-    count, sum = 0, 0
-
-    for rating in  Rating.objects.filter(book=instance.book):
+def set_rating(book):
+    count = 1
+    sum = 1
+    for rating in UserBookRating.objects.filter(book=book):
         count += 1
         sum += rating.rating
 
-    # book.rating = sum // count
-    # book.save()
+
+@receiver(signals.post_save, sender=UserBookRating)
+def set_rating(sender, instance, **kwargs):
+    count, sum = 0, 0
+    book = instance.book
+
+    for rating in UserBookRating.objects.filter(book=book):
+        count += 1
+        sum += rating.rating
+    book.rating = sum / count
+    book.save()

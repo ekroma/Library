@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Books, BookCover, Genre, BookState, Rating
+from .models import Books, BookCover, Genre, UserBookState, UserBookRating
 
-# admin.site.register(BookState)
-admin.site.register(Rating)
+admin.site.register(UserBookState)
+admin.site.register(UserBookRating)
 
 class TabularInlineImage(admin.TabularInline):
     model = BookCover
