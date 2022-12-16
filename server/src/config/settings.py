@@ -111,7 +111,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 STATIC_DIRS = [
     os.path.join(BASE_DIR, 'config/static'),
 ]
@@ -122,7 +121,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_SUBJECT_PREFIX = '[SuperService]',
-EMAIL_BACKENDS = 'django.core.mail.backends.smtp.EmailBackend' 
+EMAIL_BACKENDS = config('EMAIL_BACKENDS')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER') 
 EMAIL_PORT = config('EMAIL_PORT', default=587)
 EMAIL_HOST = config('EMAIL_HOST') 
@@ -131,13 +130,6 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 EMAIL_USE_SSL = config('EMAIL_USE_SSL', cast=bool)
 
 AUTH_USER_MODEL = 'account.User'
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-    'SEARCH_PARAM': 'q'
-}
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=10),
@@ -172,8 +164,6 @@ ACTIVATION_CODE_URL = config('ACTIVATE_CODE_URL')
 # }
 
 # CACHE_MIDDLEWARE_SECONDS = 60 * 2
-
-
 
 # LOGGING = {
 #     'version': 1,
