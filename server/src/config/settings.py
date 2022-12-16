@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'core',
 
     #apps
+    'apps.comments',
     'apps.account',
     'apps.books',
     ]

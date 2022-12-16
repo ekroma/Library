@@ -8,6 +8,7 @@ urlpatterns = [
    path('', include('services.drf_yasg')),
    path('admin/', admin.site.urls),
    path('account/', include('apps.account.urls')),
+   path('comments/', include('apps.comments.urls')),
    path('library/', include('apps.books.urls')),
 ]
 
