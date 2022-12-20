@@ -97,6 +97,7 @@ class DeleteAccountView(APIView):
             status = status.HTTP_204_NO_CONTENT
         )
 
+
 class LogoutView(APIView):
     serializer_class = RefreshTokenSerializer
     permission_classes = (IsAuthenticated, )
@@ -106,6 +107,7 @@ class LogoutView(APIView):
         sz.is_valid(raise_exception=True)
         sz.save()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 class LogoutView(GenericAPIView):
     serializer_class = RefreshTokenSerializer

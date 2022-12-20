@@ -35,6 +35,7 @@ class BookViewSet(ModelViewSet):
             self.permission_classes = [IsOwner]
         return super().get_permissions()
 
+
 class GenreView(ListAPIView):
     queryset = Genre.objects.all()
     serializer_class = serializers.GenreSerializer

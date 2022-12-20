@@ -29,7 +29,7 @@ class Books(models.Model):
         verbose_name='Автор',
         to=User,
         on_delete=models.CASCADE,
-        related_name='book',
+        related_name='book'
     )
 
     def save(self, *args, **kwargs):
@@ -51,8 +51,7 @@ class BookCover(models.Model):
     book = models.ForeignKey(
         to=Books,
         on_delete=models.CASCADE,
-        related_name='book_cover'
-    )
+        related_name='book_cover')
 
 
 class Genre(models.Model):

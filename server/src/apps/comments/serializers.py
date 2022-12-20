@@ -17,12 +17,13 @@ class RecursiveSerializer(serializers.Serializer):
 class CommentCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comments
-        fields = ('book', 'content', 'parent')
+        fields = ('content', 'parent')
 
 
 class CommentSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='author.username')
     replies = RecursiveSerializer(many=True)
+    likes = serializers.IntegerField(source='count_likes')
 
     class Meta:
         list_serializer_class = FilterCommentsListSerializer
