@@ -10,6 +10,7 @@ from .tasks import send_activation_code
 
 User = get_user_model()
 
+
 def email_validator(email):
     if not User.objects.filter(email=email).exists():
         raise serializers.ValidationError('User with this email does not exist')
