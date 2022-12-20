@@ -13,7 +13,7 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Books
-        fields = ('cover', 'title','genre', 'file', 'user')
+        fields = ('cover', 'title', 'genre', 'file', 'user')
 
     def create(self, validated_data):
         return super().create(validated_data)
