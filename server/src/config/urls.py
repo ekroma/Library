@@ -10,5 +10,4 @@ urlpatterns = [
    path('account/', include('apps.account.urls')),
    # path('comments/', include('apps.comments.urls')),
    path('library/', include('apps.books.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
